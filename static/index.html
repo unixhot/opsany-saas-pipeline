@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="zh-cmn-Hans" class="theme-default"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="static/logo.png"><title>流水线 | 智能运维</title><style>#loading-mask {
+				position: fixed;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				background: #fff;
+				user-select: none;
+				z-index: 9999;
+				overflow: hidden;
+			}
+
+			.loading-wrapper {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -100%);
+			}
+
+			.loading-dot {
+				animation: antRotate 1.2s infinite linear;
+				transform: rotate(45deg);
+				position: relative;
+				display: inline-block;
+				font-size: 64px;
+				width: 64px;
+				height: 64px;
+				box-sizing: border-box;
+			}
+
+			.loading-dot i {
+				width: 22px;
+				height: 22px;
+				position: absolute;
+				display: block;
+				background-color: #1890ff;
+				border-radius: 100%;
+				transform: scale(0.75);
+				transform-origin: 50% 50%;
+				opacity: 0.3;
+				animation: antSpinMove 1s infinite linear alternate;
+			}
+
+			.loading-dot i:nth-child(1) {
+				top: 0;
+				left: 0;
+			}
+
+			.loading-dot i:nth-child(2) {
+				top: 0;
+				right: 0;
+				-webkit-animation-delay: 0.4s;
+				animation-delay: 0.4s;
+			}
+
+			.loading-dot i:nth-child(3) {
+				right: 0;
+				bottom: 0;
+				-webkit-animation-delay: 0.8s;
+				animation-delay: 0.8s;
+			}
+
+			.loading-dot i:nth-child(4) {
+				bottom: 0;
+				left: 0;
+				-webkit-animation-delay: 1.2s;
+				animation-delay: 1.2s;
+			}
+
+			@keyframes antRotate {
+				to {
+					-webkit-transform: rotate(405deg);
+					transform: rotate(405deg);
+				}
+			}
+
+			@-webkit-keyframes antRotate {
+				to {
+					-webkit-transform: rotate(405deg);
+					transform: rotate(405deg);
+				}
+			}
+
+			@keyframes antSpinMove {
+				to {
+					opacity: 1;
+				}
+			}
+
+			@-webkit-keyframes antSpinMove {
+				to {
+					opacity: 1;
+				}
+			}</style><link href="static/css/chunk-0f51c3f2.e8dc5e77.css" rel="prefetch"><link href="static/css/chunk-14687254.c41f4c96.css" rel="prefetch"><link href="static/css/chunk-16f72326.3972a70f.css" rel="prefetch"><link href="static/css/chunk-25a9e8b8.d821af95.css" rel="prefetch"><link href="static/css/chunk-31f58efc.50bf1f7e.css" rel="prefetch"><link href="static/css/chunk-3523e567.1eef2c61.css" rel="prefetch"><link href="static/css/chunk-4a74eb72.0de90592.css" rel="prefetch"><link href="static/css/chunk-4e1f466c.95ab2bfb.css" rel="prefetch"><link href="static/css/chunk-55e4d548.01a18296.css" rel="prefetch"><link href="static/css/chunk-58dcdc38.1f6099fb.css" rel="prefetch"><link href="static/css/chunk-601cf047.3c41c639.css" rel="prefetch"><link href="static/css/chunk-65d30d90.2a3a9cbc.css" rel="prefetch"><link href="static/css/chunk-8a9a31cc.aa99af3c.css" rel="prefetch"><link href="static/css/chunk-afc242b4.ad98d6d0.css" rel="prefetch"><link href="static/css/chunk-e516da94.aaef5ff5.css" rel="prefetch"><link href="static/css/error.721ede46.css" rel="prefetch"><link href="static/css/fail.b9ec6fa0.css" rel="prefetch"><link href="static/js/chunk-0f51c3f2.5b620295.js" rel="prefetch"><link href="static/js/chunk-14687254.638d7585.js" rel="prefetch"><link href="static/js/chunk-16f72326.23b0f164.js" rel="prefetch"><link href="static/js/chunk-25a9e8b8.53023286.js" rel="prefetch"><link href="static/js/chunk-31f58efc.6e9f2109.js" rel="prefetch"><link href="static/js/chunk-3523e567.230f378b.js" rel="prefetch"><link href="static/js/chunk-4a74eb72.7617b351.js" rel="prefetch"><link href="static/js/chunk-4e1f466c.1f613b48.js" rel="prefetch"><link href="static/js/chunk-55e4d548.312bf888.js" rel="prefetch"><link href="static/js/chunk-58dcdc38.890389b4.js" rel="prefetch"><link href="static/js/chunk-601cf047.f9a6b0a5.js" rel="prefetch"><link href="static/js/chunk-65d30d90.de3a808b.js" rel="prefetch"><link href="static/js/chunk-8a9a31cc.52abd10f.js" rel="prefetch"><link href="static/js/chunk-afc242b4.2525687e.js" rel="prefetch"><link href="static/js/chunk-e516da94.7cb9a8b3.js" rel="prefetch"><link href="static/js/error.8bf0dcd7.js" rel="prefetch"><link href="static/js/fail.97de02d5.js" rel="prefetch"><link href="static/js/lang-zh-CN.61900f89.js" rel="prefetch"><link href="static/js/npm.diff2html.3e5b504b.js" rel="prefetch"><link href="static/js/npm.sortablejs.a1516086.js" rel="prefetch"><link href="static/js/npm.vue-code-diff.7a88223e.js" rel="prefetch"><link href="static/js/npm.vue-grid-layout.f81df94f.js" rel="prefetch"><link href="static/js/npm.vuedraggable.b54ebdb6.js" rel="prefetch"><link href="static/css/app.9b239d73.css" rel="preload" as="style"><link href="static/css/npm.ant-design-vue.3b5f8c0e.css" rel="preload" as="style"><link href="static/css/npm.jiaminghi.3733c13d.css" rel="preload" as="style"><link href="static/js/app.d83f6743.js" rel="preload" as="script"><link href="static/js/npm.ace-builds.b773b1db.js" rel="preload" as="script"><link href="static/js/npm.ant-design-vue.5817cef0.js" rel="preload" as="script"><link href="static/js/npm.ant-design.3e28762f.js" rel="preload" as="script"><link href="static/js/npm.antv.abb616b6.js" rel="preload" as="script"><link href="static/js/npm.core-js.7742b1ed.js" rel="preload" as="script"><link href="static/js/npm.echarts.93479f19.js" rel="preload" as="script"><link href="static/js/npm.jiaminghi.e14f2c83.js" rel="preload" as="script"><link href="static/js/npm.lodash.9f5ddbd1.js" rel="preload" as="script"><link href="static/js/npm.moment.099028d1.js" rel="preload" as="script"><link href="static/js/npm.v-charts.62c162ba.js" rel="preload" as="script"><link href="static/js/npm.vue-container-query.9104455a.js" rel="preload" as="script"><link href="static/js/npm.vue-i18n.75f17349.js" rel="preload" as="script"><link href="static/js/npm.vue-router.294487ee.js" rel="preload" as="script"><link href="static/js/npm.vue.8fb1b8ae.js" rel="preload" as="script"><link href="static/js/npm.zrender.5f2a23fc.js" rel="preload" as="script"><link href="static/js/runtime.0e4f18a8.js" rel="preload" as="script"><link href="static/js/vendors~app.f5a46069.js" rel="preload" as="script"><link href="static/css/npm.ant-design-vue.3b5f8c0e.css" rel="stylesheet"><link href="static/css/npm.jiaminghi.3733c13d.css" rel="stylesheet"><link href="static/css/app.9b239d73.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but vue-antd-pro doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"><div id="loading-mask"><div class="loading-wrapper"><span class="loading-dot loading-dot-spin"><i></i><i></i><i></i><i></i></span></div></div></div><script>window.API_ROOT = "{{SITE_URL}}";
+			let script = document.createElement("script");
+			script.src = window.location.origin + "/" + window.API_ROOT.split("/")[1] + "/llmops/static/chat/opsany-chat-modal.umd.js?t=" + Date.now();
+			// 公共 header（<opsany-header> 自定义元素），dev/prod 均从 workbench 的静态目录加载（单点更新）
+			let headerScript = document.createElement("script");
+			if (window.API_ROOT && window.API_ROOT.indexOf("SITE_URL") > -1) {
+				// dev：API_ROOT 是 SITE_URL 占位符，硬编码测试服务器上部署的产物
+				headerScript.src = "https://192.168.0.111/t/workbench/static/header/opsany-header.umd.js?t=" + Date.now();
+			} else {
+				// prod：按当前平台前缀推导 workbench 静态目录
+				headerScript.src = window.location.origin + "/" + window.API_ROOT.split("/")[1] + "/workbench/static/header/opsany-header.umd.js?t=" + Date.now();
+			}
+			document.body.appendChild(headerScript);
+			document.body.appendChild(script);</script><script src="static/js/runtime.0e4f18a8.js"></script><script src="static/js/npm.ant-design-vue.5817cef0.js"></script><script src="static/js/npm.antv.abb616b6.js"></script><script src="static/js/npm.vue.8fb1b8ae.js"></script><script src="static/js/npm.echarts.93479f19.js"></script><script src="static/js/npm.core-js.7742b1ed.js"></script><script src="static/js/npm.jiaminghi.e14f2c83.js"></script><script src="static/js/npm.lodash.9f5ddbd1.js"></script><script src="static/js/npm.zrender.5f2a23fc.js"></script><script src="static/js/npm.ant-design.3e28762f.js"></script><script src="static/js/npm.ace-builds.b773b1db.js"></script><script src="static/js/npm.moment.099028d1.js"></script><script src="static/js/npm.v-charts.62c162ba.js"></script><script src="static/js/npm.vue-container-query.9104455a.js"></script><script src="static/js/npm.vue-i18n.75f17349.js"></script><script src="static/js/npm.vue-router.294487ee.js"></script><script src="static/js/vendors~app.f5a46069.js"></script><script src="static/js/app.d83f6743.js"></script></body></html>
